@@ -1,0 +1,26 @@
+@import './scss/settings/colours';
+@import './scss/settings/media-queries';
+
+.app {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: $brand-black;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+@include notebook {
+  .app {
+    height: 100vh;
+    padding: 0;
+    &__wrapper {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+}

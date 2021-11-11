@@ -1,0 +1,24 @@
+@import './../../scss/settings/colours';
+@import './../../scss/settings/objects';
+
+.puzzle-completed-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: $brand-black;
+    &__copy {
+        background: $grey-300;
+        border-radius: $border-radius;
+        padding: 4rem;
+        max-width: 400px;
+        &__title {
+            color: $brand-pink;
+            line-height: 5rem;
+            margin-bottom: 4rem;
+        }
+    }
+}

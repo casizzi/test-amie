@@ -1,0 +1,71 @@
+@import './../../scss/settings/colours';
+@import './../../scss/settings/objects';
+@import './../../scss/settings/media-queries';
+
+
+.word-info {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 0.5rem;
+        &__label {
+            font-weight: bold;
+            color: $brand-pink;
+            white-space: nowrap;
+            margin: 1rem 0;
+        }
+        &__value {
+            font-weight: bold;
+            color: $grey-100;
+            background: $grey-300;
+            border-radius: $border-radius;
+            padding: 1.5rem;
+            text-transform: capitalize;
+            transition: color 0.25s ease;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            &--highlight,
+            &--success {
+                transition: color 0.25s ease;
+            }
+            &--highlight {
+                letter-spacing: 0.2rem;
+                color: $grey-100;
+            }
+            &--success {
+                color: $success;
+            }
+            &__label {
+                font-weight: bold;
+                color: $grey-200;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+@include notebook {
+    .word-info {
+        flex-direction: column;
+        &__item {
+            margin-right: 0;
+            &__label {
+                &--word {
+                    position: absolute;
+                    top: -4rem;
+                }
+            }
+            &__value {
+                width: 130px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

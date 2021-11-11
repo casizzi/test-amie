@@ -1,0 +1,58 @@
+@import './../../scss/settings/colours';
+@import './../../scss/settings/objects';
+@import './../../scss/settings/media-queries';
+
+.puzzle-info {
+    position: relative;
+
+    &__label {
+        font-weight: bold;
+        color: $grey-200;
+        white-space: nowrap;
+        margin: 2rem 0;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        font-weight: bold;
+        text-transform: capitalize;
+        color: $grey-200;
+        background: $grey-300;
+        border-radius: $border-radius;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        margin-right: 0.5rem;
+        &--highlight {
+            color: $grey-100;
+            width: max-content;
+            align-self: flex-start;
+        }
+    }
+}
+
+@include notebook {
+    .puzzle-info {
+        &__label {
+            &:first-child {
+                position: absolute;
+                top: -4rem;
+                color: $brand-pink;
+                margin: 0;
+            }
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__item {
+            margin-right: 0.5;
+            width: 130px;
+            &--highlight {
+                width: unset;
+            }
+        }
+    }
+}

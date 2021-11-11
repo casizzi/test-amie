@@ -1,0 +1,21 @@
+@import './../settings/_colours';
+
+.button {
+    line-height: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: no-wrap;
+    color: $grey-200;
+    border-radius: 3px;
+    border: none;
+    background: $grey-100;
+    padding: 0 4rem;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    &:hover {
+        cursor: pointer;
+        color: $grey-100;
+        background: $brand-pink;
+        transition: all 0.2s ease;
+    }
+}

@@ -1,0 +1,25 @@
+@import './../../scss/settings/colours';
+
+$animation-duration: 0.15s;
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity $animation-duration ease;
+    &.appear {
+        opacity: 0;
+        transition: opacity $animation-duration ease;
+    }
+    &.appear-enter-done {
+        opacity: 1;
+        transition: opacity $animation-duration ease;
+    }
+}

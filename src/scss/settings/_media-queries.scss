@@ -1,0 +1,14 @@
+$notebook: 1330px;
+$tablet: 700px;
+
+@mixin tablet() {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin notebook() {
+    @media screen and (min-width: $notebook) {
+      @content;
+    }
+}
