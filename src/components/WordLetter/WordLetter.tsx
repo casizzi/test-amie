@@ -1,7 +1,6 @@
 import {useEffect, useState, Dispatch, SetStateAction} from 'react'
 import './WordLetter.scss'
 import validateDirection from './../../helpers/validateDirection'
-
 interface WordLetterType {
     letter: string
     xindex: number
@@ -25,25 +24,28 @@ const WordLetter = ({
     setIsSelectingWord, 
     selectedWordLocation, 
     setSelectedWordLocation, 
-    isLetterFound
+    isLetterFound,
 }: WordLetterType) => {
     const [isThisLetterSelected, setIsThisLetterSelected] = useState(false)
     useEffect(() => {if(!isSelectingWord) setIsThisLetterSelected(false)}, [isSelectingWord])
 
     const startSelect = () => {
+        setIsSelectingWord(true)
         setSelectedWordLocation([`${xindex}${yindex}`])
         setIsThisLetterSelected(true)
-        setIsSelectingWord(true)
     }
 
     const dragSelect = () => { 
         if(isSelectingWord) {
             const validDirection = validateDirection({currDirection, selectedWordLocation, xindex, yindex})
+            console.log('validDirection', validDirection)
             if(validDirection) {
                 setCurrDirection(validDirection)
                 const isSelectingWordCopy = [...selectedWordLocation, `${xindex}${yindex}`]
                 setIsThisLetterSelected(true)
                 setSelectedWordLocation(isSelectingWordCopy)
+            } else {
+                setIsSelectingWord(false)
             }
         } else {
             setIsSelectingWord(false)
@@ -51,8 +53,8 @@ const WordLetter = ({
     }
 
     const stopSelect = () => {
-        setCurrDirection(false)
         setIsSelectingWord(false)
+        setCurrDirection(false)
         setSelectedWordLocation([''])
     }
     

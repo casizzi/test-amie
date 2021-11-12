@@ -24,14 +24,14 @@ const validateDirection = ({ currDirection, selectedWordLocation, xindex, yindex
     const checkLeftDown = (lastSelectedLetter.x - 1 === xindex) && (lastSelectedLetter.y + 1 === yindex)
 
     switch(true) {
-        case (!currDirection || currDirection === DIRECTIONS.RIGHT) && checkRight : return DIRECTIONS.RIGHT
-        case (!currDirection || currDirection === DIRECTIONS.LEFT) && checkLeft : return DIRECTIONS.LEFT
-        case (!currDirection || currDirection === DIRECTIONS.UP) && checkUp : return DIRECTIONS.UP
-        case (!currDirection || currDirection === DIRECTIONS.DOWN) && checkDown : return DIRECTIONS.DOWN
-        case (!currDirection || currDirection === DIRECTIONS.RIGHT_UP) && checkRightUp : return DIRECTIONS.RIGHT_UP
-        case (!currDirection || currDirection === DIRECTIONS.RIGHT_DOWN) && checkRightDown : return DIRECTIONS.RIGHT_DOWN
-        case (!currDirection || currDirection === DIRECTIONS.LEFT_UP) && checkLeftUp : return DIRECTIONS.LEFT_UP
-        case (!currDirection || currDirection === DIRECTIONS.LEFT_DOWN) && checkLeftDown : return DIRECTIONS.LEFT_DOWN
+        case (!currDirection || currDirection === DIRECTIONS.RIGHT) && checkRight : console.log('right'); return DIRECTIONS.RIGHT
+        case (!currDirection || currDirection === DIRECTIONS.LEFT) && checkLeft : console.log('left'); return DIRECTIONS.LEFT
+        case (!currDirection || currDirection === DIRECTIONS.UP) && checkUp : console.log('up'); return DIRECTIONS.UP
+        case (!currDirection || currDirection === DIRECTIONS.DOWN) && checkDown : console.log('down'); return DIRECTIONS.DOWN
+        case (!currDirection || currDirection === DIRECTIONS.RIGHT_UP) && checkRightUp : console.log('right-up'); return DIRECTIONS.RIGHT_UP
+        case (!currDirection || currDirection === DIRECTIONS.RIGHT_DOWN) && checkRightDown : console.log('right-down'); return DIRECTIONS.RIGHT_DOWN
+        case (!currDirection || currDirection === DIRECTIONS.LEFT_UP) && checkLeftUp : console.log('left-up'); return DIRECTIONS.LEFT_UP
+        case (!currDirection || currDirection === DIRECTIONS.LEFT_DOWN) && checkLeftDown : console.log('left-down'); return DIRECTIONS.LEFT_DOWN
         default : return false
     }
 }

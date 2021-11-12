@@ -72,6 +72,7 @@ const WordGrid = () => {
 
     const resetState = () => {
         setIsSelectingWord(false)
+        setCurrDirection(false)
         setSelectedWordLocation([])
         setSolvedLetters([])
         setCurrSolvedWords([])
