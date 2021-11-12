@@ -35,10 +35,9 @@ const WordLetter = ({
         setIsThisLetterSelected(true)
     }
 
-    const dragSelect = () => { 
+    const dragSelect = () => {
         if(isSelectingWord) {
             const validDirection = validateDirection({currDirection, selectedWordLocation, xindex, yindex})
-            console.log('validDirection', validDirection)
             if(validDirection) {
                 setCurrDirection(validDirection)
                 const isSelectingWordCopy = [...selectedWordLocation, `${xindex}${yindex}`]
