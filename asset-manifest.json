@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/test-amie/static/css/main.d1659af6.chunk.css",
-    "main.js": "/test-amie/static/js/main.3245b539.chunk.js",
-    "main.js.map": "/test-amie/static/js/main.3245b539.chunk.js.map",
+    "main.css": "/test-amie/static/css/main.6ab30d3c.chunk.css",
+    "main.js": "/test-amie/static/js/main.e5b29678.chunk.js",
+    "main.js.map": "/test-amie/static/js/main.e5b29678.chunk.js.map",
     "runtime-main.js": "/test-amie/static/js/runtime-main.853b4b23.js",
     "runtime-main.js.map": "/test-amie/static/js/runtime-main.853b4b23.js.map",
     "static/js/2.86eb5874.chunk.js": "/test-amie/static/js/2.86eb5874.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.662241e7.chunk.js": "/test-amie/static/js/3.662241e7.chunk.js",
     "static/js/3.662241e7.chunk.js.map": "/test-amie/static/js/3.662241e7.chunk.js.map",
     "index.html": "/test-amie/index.html",
-    "static/css/main.d1659af6.chunk.css.map": "/test-amie/static/css/main.d1659af6.chunk.css.map",
+    "static/css/main.6ab30d3c.chunk.css.map": "/test-amie/static/css/main.6ab30d3c.chunk.css.map",
     "static/js/2.86eb5874.chunk.js.LICENSE.txt": "/test-amie/static/js/2.86eb5874.chunk.js.LICENSE.txt",
     "static/media/global.scss": "/test-amie/static/media/MatterSQTRIAL-SemiBold.bcad6409.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.853b4b23.js",
     "static/js/2.86eb5874.chunk.js",
-    "static/css/main.d1659af6.chunk.css",
-    "static/js/main.3245b539.chunk.js"
+    "static/css/main.6ab30d3c.chunk.css",
+    "static/js/main.e5b29678.chunk.js"
   ]
 }
